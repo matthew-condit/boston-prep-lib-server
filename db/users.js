@@ -7,7 +7,7 @@ var options = {
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/users';
+var connectionString = 'postgres://localhost:5432/boston_prep_lib';
 var db = pgp(connectionString);
 
 const getAllUsers = async(req, res, next) => {
