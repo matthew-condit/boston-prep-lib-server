@@ -1,0 +1,121 @@
+[
+    {
+        "author": "Tyree, Omar", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781933491127", 
+        "description": "A collection of short stories featuring African American preteen boys as central characters. These diverse characters are funny, serious, edgy, and studious.", 
+        "genre": "Fiction", 
+        "id": "9781933491127", 
+        "lexile": "760", 
+        "pages": "187", 
+        "tags": [
+            "African Americans", 
+            "Boys", 
+            "Short stories."
+        ], 
+        "title": "12 brown boys"
+    }, 
+    {
+        "author": "Krasner, Barbara", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781632353238", 
+        "description": "Shares tips for creating and maintaining a blog. Includes a checklist, a glossary, resources for further information, and color photographs.", 
+        "genre": "fictio", 
+        "id": "9781632353238", 
+        "lexile": "730", 
+        "pages": "32", 
+        "tags": [
+            "Weblogs.", 
+            "Online journalism."
+        ], 
+        "title": "12 great tips on writing a blog"
+    }, 
+    {
+        "author": "Meyer, Carolyn", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781481403276", 
+        "description": "A novel in diary form in which the youngest daughter of Czar Nicholas II describes the privileged life her family led up until the time of World War I and the tragic events that befell them.", 
+        "genre": "Fiction", 
+        "id": "9781481403276", 
+        "lexile": "970", 
+        "pages": "310", 
+        "tags": [
+            "Princesses", 
+            "Sisters", 
+            "Diaries", 
+            "Historical fiction."
+        ], 
+        "title": "Anastasia and her sisters"
+    }, 
+    {
+        "author": "Collins, Terr", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781429694728", 
+        "description": "Contains a choose-your-own-path story describing the life and times of ancient China. The reader's choices reveal the historical details of life from the perspectives of several characters. Includes forty-three choices and twenty-four endings.", 
+        "genre": "fictio", 
+        "id": "9781429694728", 
+        "lexile": "710", 
+        "pages": "112", 
+        "tags": [
+            "Plot-your-own stories.", 
+            "Historical fiction."
+        ], 
+        "title": "Ancient China"
+    }, 
+    {
+        "author": "Buchanan, Shelly", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781480746787", 
+        "description": "Describes the different ways animals use their senses to learn about the world around them.", 
+        "genre": "fictio", 
+        "id": "9781480746787", 
+        "lexile": "780", 
+        "pages": "32", 
+        "tags": [
+            "Senses and sensation.", 
+            "Animals."
+        ], 
+        "title": "Animal senses"
+    }, 
+    {
+        "author": "Morreale, Marie", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9780531212721", 
+        "description": "Presents a biography of singer Ariana Grande, covering her early years, her path to stardom, and her goals for the future. Includes an index, a list of additional resources, and a glossary.", 
+        "genre": "Biography", 
+        "id": "9780531212721", 
+        "lexile": "890", 
+        "pages": "48", 
+        "tags": [
+            "Singers", 
+            "Actors", 
+            "Women"
+        ], 
+        "title": "Ariana Grande"
+    }, 
+    {
+        "author": "Phelan, Matt", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9780763669256", 
+        "description": "Challenged with circling the world at the end of the nineteenth century, three very different adventurers--avid bicyclist Thomas Stevens, fearless reporter Nellie Bly, and retired sea captain Joshua Slocum--embark on epic journeys.", 
+        "genre": "Graphic novels", 
+        "id": "9780763669256", 
+        "lexile": "No Lexile Information", 
+        "pages": "235", 
+        "tags": [
+            "Voyages around the world", 
+            "Adventure graphic novels.", 
+            "Graphic novels."
+        ], 
+        "title": "Around the world"
+    }, 
+    {
+        "author": "Colfer, Eoin", 
+        "coverImageUrl": "http://www.mackin.com/BookPics/Book.aspx?isbn=9781423124528", 
+        "description": "When a twelve-year-old evil genius tries to restore his family fortune by capturing a fairy and demanding a ransom in gold, the fairies fight back with magic, technology, and a particularly nasty troll.", 
+        "genre": "Fiction", 
+        "id": "9781423124528", 
+        "lexile": "No Lexile Information", 
+        "pages": "277", 
+        "tags": [
+            "Fairies", 
+            "Kidnapping", 
+            "Magic", 
+            "Mother-son relationship"
+        ], 
+        "title": "Artemis Fowl"
+    }
+]
