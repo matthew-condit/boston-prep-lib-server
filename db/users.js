@@ -1,5 +1,5 @@
 // var promise = require('bluebird');
-var _tryCatchHOF = require('./utils').async._tryCatchHOF;
+var _tryCatchHOF = require('../utils').async._tryCatchHOF;
 
 var options = {
   // Initialization Options

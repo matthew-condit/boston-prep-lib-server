@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var db = require('../queries');
+var Users = require('../db').users;
 
-router.get('/', db.getAllUsers);
-router.get('/:id', db.getUserById);
-router.post('/register', db.createNewUser);
+router.get('/', Users.getAllUsers);
+router.get('/:id', Users.getUserById);
+router.post('/register', Users.createNewUser);
+
 
 module.exports = router;
