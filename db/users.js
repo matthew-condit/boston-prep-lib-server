@@ -1,14 +1,6 @@
 // var promise = require('bluebird');
-var _tryCatchHOF = require('../utils').async._tryCatchHOF;
-
-var options = {
-  // Initialization Options
-  // promiseLib: promise
-};
-
-var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/boston_prep_lib';
-var db = pgp(connectionString);
+const _tryCatchHOF = require('../utils').async._tryCatchHOF;
+const db = require('./index').db;
 
 const getAllUsers = async(req, res, next) => {
   const data = await db.any('select * from users');
@@ -22,26 +14,27 @@ const getAllUsers = async(req, res, next) => {
 const getUserById = async(req, res, next) => {
   const userId = parseInt(req.params.id);
   console.error('userId', userId);
-  const user = await db.one('select * from users where id = $1', userId)
+  const user = await db.one('select * from users where id = $1', userId);
   res.status(200).json({
     status: 'success',
     data: user,
     messsage: 'Retrieved User by Id'
   })
-}
+};
 
 const getUserByEmail = async(email) => {
   const user = await db.one('select * from users where email = $1', email);
   return user;
-}
+};
 
 const createNewUser = async(req, res, next) => {
-  await db.none('insert into users(firstName, lastName, email) values(${firstName}, ${lastName}, ${email})', req.body)
+  req.body.role = "member";
+  await db.none('insert into users(firstName, lastName, password, email, role) values(${firstName}, ${lastName}, ${password}, ${email}, ${role})', req.body);
   res.status(200).json({
     status: 'success', 
     message: `Created new user ${req.body.firstName}`
   });
-}
+};
 
 
 module.exports = {
