@@ -30,6 +30,11 @@ const getUserById = async(req, res, next) => {
   })
 }
 
+const getUserByEmail = async(email) => {
+  const user = await db.one('select * from users where email = $1', email);
+  return user;
+}
+
 const createNewUser = async(req, res, next) => {
   await db.none('insert into users(firstName, lastName, email) values(${firstName}, ${lastName}, ${email})', req.body)
   res.status(200).json({
@@ -42,5 +47,6 @@ const createNewUser = async(req, res, next) => {
 module.exports = {
   getAllUsers: _tryCatchHOF(getAllUsers),
   getUserById: _tryCatchHOF(getUserById),
-  createNewUser: _tryCatchHOF(createNewUser)
+  createNewUser: _tryCatchHOF(createNewUser),
+  getUserByEmail: _tryCatchHOF(getUserByEmail),
 };
