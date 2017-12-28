@@ -12,7 +12,7 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (firstName, lastName, email, role)
-  VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 'student');
+  VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 'member');
 
   INSERT INTO users (firstName, lastName, email, role)
   VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 'admin');
