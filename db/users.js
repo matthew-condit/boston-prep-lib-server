@@ -13,7 +13,6 @@ const getAllUsers = async(req, res, next) => {
 
 const getUserById = async(req, res, next) => {
   const userId = parseInt(req.params.id);
-  console.error('userId', userId);
   const user = await db.one('select * from users where id = $1', userId);
   res.status(200).json({
     status: 'success',
@@ -29,7 +28,8 @@ const getUserByEmail = async(email) => {
 
 const createNewUser = async(req, res, next) => {
   req.body.role = "member";
-  await db.none('insert into users(firstName, lastName, password, email, role) values(${firstName}, ${lastName}, ${password}, ${email}, ${role})', req.body);
+  req.body.books = [];
+  await db.none('insert into users(firstName, lastName, password, email, role, books) values(${firstName}, ${lastName}, ${password}, ${email}, ${role})', req.body);
   res.status(200).json({
     status: 'success', 
     message: `Created new user ${req.body.firstName}`

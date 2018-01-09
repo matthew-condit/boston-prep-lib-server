@@ -1,11 +1,18 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const Books = require('../db/books');
 /* GET books listing. */
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res, next ) => {
   const books = await Books.getAllBooks();
   res.status(200).json(books);
+});
+
+router.get('/:id', async (req, res, next) => {
+  const bookId = req.params.id;
+  const book = await Books.getBookById(bookId);
+  console.error(book);
+  res.status(200).json(book);
 });
 
 module.exports = router;
