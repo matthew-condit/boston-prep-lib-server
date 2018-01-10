@@ -11,7 +11,7 @@ const getBookById = async (id) => {
 };
 
 const getBooksBySearchString = async (searchString) => {
-    return await db.any("SELECT * FROM books WHERE title LIKE $1", `%${searchString}%`)
+    return await db.any("SELECT * FROM books WHERE LOWER(title) LIKE $1", `%${searchString.toLowerCase()}%`)
 };
 
 module.exports = {
