@@ -1,10 +1,12 @@
 const options = {
   // Initialization Options
   // promiseLib: promise
-
+    query(e) {
+        console.log('QUERY:', e.query);
+    }
 };
 const connectionOptions = {
-  user: 'postgres',
+  user: 'mcondit',
   password: 'eagles04',
   host: 'localhost',
   port: 5432,

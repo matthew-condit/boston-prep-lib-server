@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "db-mac": "psql -d postgres -f ./user-db-init.sql -U mcondit && node ./populate-db.js",
+    "db-win": ""
   },
   "dependencies": {
     "bluebird": "^3.5.1",

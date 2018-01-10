@@ -4,7 +4,7 @@ const options = {
 
 };
 const connectionOptions = {
-  user: 'postgres',
+  user: 'mcondit',
   password: 'eagles04',
   host: 'localhost',
   port: 5432,
@@ -19,7 +19,6 @@ const parsedBooks = require('./data.json');
 
 for (let bookId in parsedBooks) {
   const book = parsedBooks[bookId];
-  console.error(book);
 
   db.none('insert into books(id, title, author, description, lexile, pages, genre, coverImageUrl,  tags) ' +
     'values(${id}, ${title}, ${author}, ${description}, ${lexile}, ${pages}, ${genre}, ${coverImageUrl},  ${tags})', book);

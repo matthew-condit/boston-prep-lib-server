@@ -15,4 +15,11 @@ router.get('/:id', async (req, res, next) => {
   res.status(200).json(book);
 });
 
+router.post('/search/general', async (req, res, next) => {
+  const {searchString } = req.body;
+  const searchResults = await Books.getBooksBySearchString(searchString);
+    res.status(200).json(searchResults);
+
+});
+
 module.exports = router;
