@@ -14,6 +14,7 @@ const getBooksBySearchString = async (searchString) => {
     return await db.any("SELECT * FROM books WHERE LOWER(title) LIKE $1", `%${searchString.toLowerCase()}%`)
 };
 
+
 module.exports = {
     getAllBooks: _tryCatchHOF(getAllBooks),
     getBookById: _tryCatchHOF(getBookById),

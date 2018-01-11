@@ -13,13 +13,25 @@ router.post('/login', async (req, res, next) => {
     console.error(user, req.body);
     if (user.password === req.body.password) {
         res.status(200).json({
-            authenticated: true
+            authenticated: true,
+            user
         })
     } else {
         res.status(401).json({
             authenticated: false
         })
     }
+});
+
+router.post('/addBook', async (req, res, next) => {
+    await Users.addBookToUser(req.body);
+    const updated = await Users.getUserById(req.body.userId);
+    res.status(200).json(updated);
+});
+
+router.post('/booksByUser', async ( req, res, next) => {
+    const list = await Users.getBooksByUserList(req.body.userId);
+    res.status(200).json(list);
 });
 
 

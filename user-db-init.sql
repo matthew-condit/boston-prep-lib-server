@@ -10,26 +10,36 @@ CREATE TABLE users (
   email VARCHAR,
   password VARCHAR,
   role VARCHAR,
-  books VARCHAR[]
+  readBooks VARCHAR[]
 );
 
 INSERT INTO users (firstName, lastName, email, password, role)
   VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 'password', 'member');
 
-  INSERT INTO users (firstName, lastName, email, password, role)
+INSERT INTO users (firstName, lastName, email, password, role)
   VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 'admin', 'admin');
 
-  CREATE TABLE books (
-      ID VARCHAR PRIMARY KEY,
-      title VARCHAR,
-      author VARCHAR,
-      description VARCHAR,
-      lexile VARCHAR,
-      genre VARCHAR,
-      pages VARCHAR,
-      coverImageUrl VARCHAR,
-      tags VARCHAR[]
-  )
+CREATE TABLE books (
+  ID VARCHAR PRIMARY KEY,
+  title VARCHAR,
+  author VARCHAR,
+  description VARCHAR,
+  lexile VARCHAR,
+  genre VARCHAR,
+  pages VARCHAR,
+  coverImageUrl VARCHAR,
+  tags VARCHAR[]
+)
+
+CREATE TABLE classes (
+    ID VARCHAR PRIMARY KEY,
+    className VARCHAR,
+    roomNumber VARCHAR,
+    teachers VARCHAR[],
+    students VARCHAR[]
+)
+
+
 --
 --  INSERT INTO books (
 --  ID,
