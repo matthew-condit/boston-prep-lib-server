@@ -29,15 +29,20 @@ CREATE TABLE books (
   pages VARCHAR,
   coverImageUrl VARCHAR,
   tags VARCHAR[]
-)
+);
 
 CREATE TABLE classes (
-    ID VARCHAR PRIMARY KEY,
-    className VARCHAR,
-    roomNumber VARCHAR,
-    teachers VARCHAR[],
-    students VARCHAR[]
-)
+  ID SERIAL PRIMARY KEY,
+      className VARCHAR,
+      roomNumber VARCHAR,
+      teachers INT[],
+      students INT[]
+);
+
+
+INSERT INTO classes (className, roomNumber, teachers, students)
+  VALUES ('Washington University', '200', ARRAY[2], ARRAY[1]);
+
 
 
 --

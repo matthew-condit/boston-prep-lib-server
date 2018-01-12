@@ -19,3 +19,5 @@ const db = pgp(connectionOptions);
 module.exports = {};
 module.exports.db = db;
 module.exports.users = require('./users');
+module.exports.classes = require('./classes');
+module.exports.books = require('./books');
