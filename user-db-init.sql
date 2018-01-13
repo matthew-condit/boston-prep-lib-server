@@ -8,16 +8,17 @@ CREATE TABLE users (
   firstName VARCHAR,
   lastName VARCHAR,
   email VARCHAR,
+  classroomId INT,
   password VARCHAR,
   role VARCHAR,
   readBooks VARCHAR[]
 );
 
-INSERT INTO users (firstName, lastName, email, password, role)
-  VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 'password', 'member');
+INSERT INTO users (firstName, lastName, email, classroomId, password, role, readBooks)
+  VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 1, 'password', 'member', ARRAY[]::VARCHAR[]);
 
-INSERT INTO users (firstName, lastName, email, password, role)
-  VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 'admin', 'admin');
+INSERT INTO users (firstName, lastName, email, password, role, readBooks)
+  VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 'admin', 'admin', ARRAY[]::VARCHAR[]);
 
 CREATE TABLE books (
   ID VARCHAR PRIMARY KEY,
@@ -25,6 +26,7 @@ CREATE TABLE books (
   author VARCHAR,
   description VARCHAR,
   lexile VARCHAR,
+  classroomId INT,
   genre VARCHAR,
   pages VARCHAR,
   coverImageUrl VARCHAR,
@@ -34,14 +36,24 @@ CREATE TABLE books (
 CREATE TABLE classes (
   ID SERIAL PRIMARY KEY,
       className VARCHAR,
+      grade INT,
       roomNumber VARCHAR,
       teachers INT[],
       students INT[]
 );
 
 
-INSERT INTO classes (className, roomNumber, teachers, students)
-  VALUES ('Washington University', '200', ARRAY[2], ARRAY[1]);
+INSERT INTO classes (className, roomNumber, grade, teachers, students)
+  VALUES ('Washington University', '200', 6, ARRAY[2], ARRAY[1]);
+
+INSERT INTO classes (className,  roomNumber, grade, teachers, students)
+  VALUES ('Boston College', '201', 6, ARRAY[2], ARRAY[1]);
+
+INSERT INTO classes (className,  roomNumber, grade, teachers, students)
+  VALUES ('Tufts University', '302', 7, ARRAY[2], ARRAY[1]);
+
+INSERT INTO classes (className,  roomNumber, grade, teachers, students)
+  VALUES ('Harvard University', '402', 8, ARRAY[2], ARRAY[1]);
 
 
 

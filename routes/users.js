@@ -2,9 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 var Users = require('../db').users;
+var Classrooms = require('../db').classes;
 
 router.get('/', Users.getAllUsers);
-router.get('/:id', Users.getUserById);
+
+router.get('/details/:id', async (req, res, next) => {
+    console.log('params', req.params);
+    const user = await Users.getUserById(req.params.id);
+    console.log(user);
+    const classroom = await Classrooms.getClassById(user.classroomid);
+    res.status(200).json({...user, classroom});
+});
+
 router.post('/register', Users.createNewUser);
 
 
