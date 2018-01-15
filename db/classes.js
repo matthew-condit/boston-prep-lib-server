@@ -20,6 +20,10 @@ const getStudentsInClassById = async (classId) => {
         'where cls.id = $1', classId);
 };
 
+const getStudentsByTeacher = async (teacherId) => {
+  return await db.any('select * from students');
+};
+
 module.exports = {
     getAllClasses: _tryCatchHOF(getAllClasses),
     getClassById: _tryCatchHOF(getClassById),

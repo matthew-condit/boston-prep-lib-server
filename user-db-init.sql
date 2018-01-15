@@ -17,8 +17,8 @@ CREATE TABLE users (
 INSERT INTO users (firstName, lastName, email, classroomId, password, role, readBooks)
   VALUES ('Matthew', 'Condit', 'matt.condit4@gmail.com', 1, 'password', 'member', ARRAY[]::VARCHAR[]);
 
-INSERT INTO users (firstName, lastName, email, password, role, readBooks)
-  VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 'admin', 'admin', ARRAY[]::VARCHAR[]);
+INSERT INTO users (firstName, lastName, email, classroomId, password, role, readBooks)
+  VALUES ('Anne', 'Gaburo', 'agaburo@colgate.edu', 1, 'admin', 'admin', ARRAY[]::VARCHAR[]);
 
 CREATE TABLE books (
   ID VARCHAR PRIMARY KEY,
